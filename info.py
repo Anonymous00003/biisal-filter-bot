@@ -18,11 +18,11 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1187176420').split()]
-USERNAME = environ.get('USERNAME', "")
+USERNAME = environ.get('USERNAME', "@bluedragon340")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002465399299'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/+6jv2jBEQ6mhmYmRl')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002332814498').split()]
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://gakshay440ag:0cgYavJRABDXiyw8@cluster0.irebe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 DATABASE_NAME = environ.get('DATABASE_NAME', "TELEGRAM_BOT_INFO")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
@@ -36,9 +36,9 @@ STICKERS_IDS = ('CAACAgQAAxkBAAEK99dlfC7LDqnuwtGRkIoacot_dGC4zQACbg8AAuHqsVDaMQe
 FILE_AUTO_DEL_TIMER = int(environ.get('FILE_AUTO_DEL_TIMER', '600'))
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002383794919'))
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/Movie_Url_link_downloader/17")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/c/2332814498/16")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-SHORTENER_API = environ.get("SHORTENER_API", "")
+SHORTENER_API = environ.get("SHORTENER_API", "e33e734f692b21188d019625bce0b324e3a869d8")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'api.gplinks.com')
 SHORTENER_API2 = environ.get("SHORTENER_API2", "")
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", '')

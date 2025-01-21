@@ -110,3 +110,35 @@ async def m_grp(client, message):
     await message.reply(f'link1 : {links[0]}\nlink2 : {links[1]}')
     await db.get_set_grp_links(links=links , ispm=ispm)
     return await message.reply('done')
+
+@Client.on_callback_query()
+async def handle_callback_query(client, callback_query):
+    try:
+        data = callback_query.data  # Get the callback_data from the button
+        
+        if data == "update_post_mode":
+            await callback_query.answer("Updating post mode...", show_alert=False)
+            # Update logic for post mode
+            await callback_query.message.edit_text(
+                "Post mode updated successfully!",
+                reply_markup=None  # Remove buttons after update
+            )
+        elif data == "change_update_post_mode":
+            await callback_query.answer("Toggling between Single and Multi mode...", show_alert=False)
+            # Toggle logic for mode
+            await callback_query.message.edit_text(
+                "Changed to Single/Multi mode!",
+                reply_markup=None
+            )
+        elif data == "all_files_post_mode":
+            await callback_query.answer("Changing upload mode...", show_alert=False)
+            # Change logic for upload mode
+            await callback_query.message.edit_text(
+                "Upload mode changed successfully!",
+                reply_markup=None
+            )
+        else:
+            await callback_query.answer("Unknown action!", show_alert=True)
+    except Exception as e:
+        print(f"Error in handle_callback_query: {e}")
+        await callback_query.answer("An error occurred!", show_alert=True)

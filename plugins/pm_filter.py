@@ -16,6 +16,8 @@ lock = asyncio.Lock()
 from .components.checkFsub import is_user_fsub
 import traceback
 from fuzzywuzzy import process
+from urllib.parse import urlparse
+
 BUTTONS = {}
 FILES_ID = {}
 CAP = {}
